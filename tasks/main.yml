@@ -39,8 +39,8 @@
   shell: "env PKG_CONFIG_PATH={{ APP_PREFIX }}/lib64/pkgconfig:{{ APP_PREFIX }}/lib/pkgconfig ./bootstrap"
   args:
     chdir: "{{ APP_SRC }}"
-- name: "Run env PKG_CONFIG_PATH={{ APP_PREFIX }}/lib64/pkgconfig:{{ APP_PREFIX }}/lib/pkgconfig ./configure --with-gtk --prefix={{ APP_PREFIX }}"
-  shell: "env PKG_CONFIG_PATH={{ APP_PREFIX }}/lib64/pkgconfig:{{ APP_PREFIX }}/lib/pkgconfig ./configure --with-gtk --prefix={{ APP_PREFIX }}"
+- name: "Run env PKG_CONFIG_PATH={{ APP_PREFIX }}/lib64/pkgconfig:{{ APP_PREFIX }}/lib/pkgconfig ./configure --prefix={{ APP_PREFIX }}"
+  shell: "env PKG_CONFIG_PATH={{ APP_PREFIX }}/lib64/pkgconfig:{{ APP_PREFIX }}/lib/pkgconfig ./configure --prefix={{ APP_PREFIX }}"
   args:
     chdir: "{{ APP_SRC }}"
 - name: "Run env PKG_CONFIG_PATH={{ APP_PREFIX }}/lib64/pkgconfig:{{ APP_PREFIX }}/lib/pkgconfig make -j $(nproc)"
